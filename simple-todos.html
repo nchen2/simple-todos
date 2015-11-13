@@ -1,16 +1,69 @@
 <head>
-  <title>Todo List</title>
+    <meta charset="utf-8">
+  <title>List</title>
 </head>
 
 <body>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>Form Page</h1>
+            <div align="left">{{> loginButtons}}</div>
+        </div>
+        
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbardata">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbardata">
+                        <ul class="nav navbar-nav">
+                            <li><a href="FAQ.html">Home</a></li>
+                            <li><a href="Input.html">Rankings</a></li>
+                            <li><a href="Input.html">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" id="side">
+                    <ul>
+                        Quiz Categories
+                    <li>Category 1</li>
+                    <li>Category 2</li>
+                    <li>Category 3</li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <form name="myForm">
+                        <div class="form-group">
+                            <p>Main Page</p>
+                            <label for="inputurl">Enter URL here: </label>
+                            <input type="text" name="url" id="inputurl">
+                                </div>
+                        <input type="button" id="submit" value="Submit" />
+                    </form>
+                    <div id="result">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--<body>
   <div class="container">
     <header>
-      <h1>Todo List ({{incompleteCount}})</h1>
+      <h1>Welcome to Website</h1>
 
-      <label class="hide-completed">
-        <input type="checkbox" checked="{{hideCompleted}}" />
-        Hide Completed Tasks
-      </label>
 
       {{> loginButtons}}
 
@@ -21,14 +74,23 @@
       {{/if}}
 
     </header>
-
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">.col-md-6</div>
+                <div class="col-md-6">.col-md-6</div>
+            </div>
+        </div>
+    
+    
+    
     <ul>
       {{#each tasks}}
         {{> task}}
       {{/each}}
     </ul>
   </div>
-</body>
+</body>-->
 
 <template name="task">
   <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
